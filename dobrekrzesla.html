@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobre Krzesła - Meble ATOS - Nowoczesne Krzesła, Fotele i Sofy</title>
+    <meta name="description" content="Odkryj nowoczesne krzesła, fotele, sofy i meble od polskiego producenta ATOS. Eleganckie, funkcjonalne i tanie meble do domu i biura.">
+    <meta name="keywords" content="krzesła, fotele, sofy, meble, ATOS, polskie meble, nowoczesne meble">
+    <style>
+        :root {
+            --primary: #6b7280;
+            --secondary: #9ca3af;
+            --accent: #d1d5db;
+            --dark-bg: #1a1a2e;
+            --mid-bg: #16213e;
+            --light-bg: #0f3460;
+            --text: #e0e0e0;
+            --text-muted: #b0b0b0;
+            --glass: rgba(26,26,46,0.95);
+            --blur: 10px;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text);
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--mid-bg) 50%, var(--light-bg) 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        @keyframes cosmicBackground {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        section { animation: fadeInUp 1.2s ease-out; transform-style: preserve-3d; }
+        header {
+            background: rgba(0, 0, 0, 0.95);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            animation: slideInLeft 1.5s ease-out 0.3s both;
+            backdrop-filter: blur(var(--blur));
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        header h1 { margin: 0; font-size: 3rem; text-shadow: 0 2px 10px rgba(0,0,0,0.7); letter-spacing: 2px; font-weight: 900; animation: float 3s ease-in-out infinite; }
+        header p { font-size: 1.4rem; opacity: 0.9; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; }
+        section {
+            padding: 4rem 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--glass);
+            border-radius: 25px;
+            margin-bottom: 3rem;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(var(--blur));
+            position: relative;
+        }
+        section::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, transparent, rgba(255,255,255,0.05), transparent); pointer-events: none; }
+        .hero {
+            background: transparent;
+            text-align: center;
+            padding: 6rem 3rem;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+            animation: slideInRight 1.5s ease-out 0.6s both;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        .hero h2 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        .hero button {
+            background: linear-gradient(45deg, var(--accent), #ff8e53, var(--primary));
+            border: none;
+            padding: 1.5rem 3rem;
+            font-size: 1.4rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 10px 30px rgba(255,107,107,0.5);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        .hero button:hover::before { left: 100%; }
+        .hero button:hover {
+            background: linear-gradient(45deg, #ff5252, #ff7043, #3a9efc);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(255,107,107,0.7), 0 0 100px var(--accent);
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        .service {
+            padding: 3rem;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 25px;
+            background: rgba(22,33,62,0.95);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            backdrop-filter: blur(var(--blur));
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            animation: fadeInUp 1.2s ease-out calc(var(--i) * 0.2s) both;
+        }
+        .service::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.8s;
+        }
+        .service:nth-child(1) { animation-delay: 0.2s; }
+        .service:nth-child(2) { animation-delay: 0.4s; }
+        .service:nth-child(3) { animation-delay: 0.6s; }
+        .service:nth-child(4) { animation-delay: 0.8s; }
+        .service:nth-child(5) { animation-delay: 1.0s; }
+        .service:nth-child(6) { animation-delay: 1.2s; }
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            border-color: rgba(255,255,255,0.4);
+            background: rgba(22,33,62,1);
+        }
+        .service h3 {
+            color: var(--primary);
+            margin-top: 0;
+            position: relative;
+            z-index: 1;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+        .chair::before {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        }
+        .armchair::before {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            border-radius: 50% 50% 20% 20%;
+        }
+        .sofa::before {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 50px;
+            height: 30px;
+            background: var(--accent);
+            border-radius: 10px;
+        }
+        .stool::before {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 20px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 10px 10px 0 0;
+        }
+        .garden::before {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, var(--secondary), var(--accent));
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+        .mattress::before {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 50px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 5px;
+        }
+        .service p {
+            color: var(--text-muted);
+            position: relative;
+            z-index: 1;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--glass);
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(var(--blur));
+            animation: fadeInUp 1.5s ease-out 1.2s both;
+            position: relative;
+        }
+        input, textarea, select {
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 1.2rem;
+            font-size: 1.1rem;
+            background: rgba(255,255,255,0.1);
+            color: var(--text);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        input:focus, textarea:focus, select:focus {
+            border-color: var(--primary);
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            box-shadow: 0 0 10px rgba(79,172,254,0.3);
+        }
+        button[type="submit"] {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 1.5rem;
+            font-size: 1.3rem;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            width: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+        button[type="submit"]::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        button[type="submit"]:hover::before { left: 100%; }
+        button[type="submit"]:hover {
+            background: linear-gradient(45deg, #3a9efc, #00e0e0);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(79,172,254,0.4);
+        }
+        footer {
+            background: rgba(15,52,96,0.95);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            backdrop-filter: blur(var(--blur));
+            border-top: 2px solid rgba(255,255,255,0.1);
+            animation: fadeInUp 1.5s ease-out 2.5s both;
+            position: relative;
+        }
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.05), transparent);
+            pointer-events: none;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 1024px) {
+            .services { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+            .hero h2 { font-size: 3rem; }
+            .hero p { font-size: 1.3rem; }
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1.2rem; }
+            .hero h2 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .hero button { font-size: 1.2rem; padding: 1.2rem 2rem; }
+            .services { grid-template-columns: 1fr; }
+            section { padding: 3rem 2rem; }
+            form { padding: 2rem; }
+            .service { padding: 2rem; }
+        }
+        @media (max-width: 480px) {
+            header { padding: 2rem 1rem; }
+            header h1 { font-size: 2rem; }
+            .hero { padding: 4rem 2rem; }
+            .hero h2 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .hero button { font-size: 1rem; padding: 1rem 1.5rem; }
+            section { padding: 2rem 1rem; }
+            form { padding: 1.5rem; }
+            .service { padding: 1.5rem; }
+            footer { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dobre Krzesła - Meble ATOS</h1>
+        <p>Nowoczesne meble dla domu i biura</p>
+    </header>
+
+    <section class="hero">
+        <h2>Witaj w Świecie Nowoczesnych MEBLI</h2>
+        <p>Odkryj eleganckie krzesła, fotele, sofy i inne meble od polskiego producenta ATOS. Funkcjonalność spotyka design.</p>
+        <a href="#contact"><button>Zobacz Ofertę</button></a>
+    </section>
+
+    <section id="about">
+        <h2>O ATOS</h2>
+        <p>Jesteśmy polskim producentem mebli, specjalizującym się w krzesłach, fotelach, sofach i innych elementach wyposażenia wnętrz. Nasze produkty łączą jakość, nowoczesny design i przystępne ceny.</p>
+    </section>
+
+    <section id="services">
+        <h2>Nasze Produkty</h2>
+        <div class="services">
+            <div class="service chair">
+                <h3>Krzesła</h3>
+                <p>Eleganckie krzesła do jadalni, biura i salonu. Szeroki wybór modeli i tkanin.</p>
+            </div>
+            <div class="service armchair">
+                <h3>Fotele</h3>
+                <p>Wygodne fotele klubowe, biurowe i gamingowe. Ergonomiczne i stylowe.</p>
+            </div>
+            <div class="service sofa">
+                <h3>Sofy</h3>
+                <p>Nowoczesne sofy do salonu. Komfort i design w jednym.</p>
+            </div>
+            <div class="service stool">
+                <h3>Hokery</h3>
+                <p>Barowe i klubowe hokery. Idealne do kuchni i salonu.</p>
+            </div>
+            <div class="service garden">
+                <h3>Meble Ogrodowe</h3>
+                <p>Wytrzymałe meble na taras i ogród. Odporne na warunki atmosferyczne.</p>
+            </div>
+            <div class="service mattress">
+                <h3>Materace</h3>
+                <p>Komfortowe materace turystyczne i do domu. Wysoka jakość snu.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="promotions">
+        <h2>Promocje</h2>
+        <p>Sprawdź nasze aktualne oferty specjalne i rabaty na wybrane produkty.</p>
+        <div class="services">
+            <div class="service">
+                <h3>Rabat 20% na Krzesła</h3>
+                <p>Wybrane modele krzeseł w promocyjnej cenie. Oferta ograniczona czasowo.</p>
+            </div>
+            <div class="service">
+                <h3>2+1 na Fotele</h3>
+                <p>Kup dwa fotele, trzeci gratis. Idealne do salonu.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="bestsellers">
+        <h2>Bestsellery</h2>
+        <p>Najpopularniejsze produkty wśród naszych klientów.</p>
+        <div class="services">
+            <div class="service">
+                <h3>Krzesło Model X</h3>
+                <p>Eleganckie krzesło do jadalni. Cena: 299 zł.</p>
+            </div>
+            <div class="service">
+                <h3>Fotel Gaming Y</h3>
+                <p>Ergonomiczny fotel dla graczy. Cena: 599 zł.</p>
+            </div>
+            <div class="service">
+                <h3>Sofa Z</h3>
+                <p>Wygodna sofa 3-osobowa. Cena: 1299 zł.</p>
+            </div>
+        </div>
+    </section>
+        <h2>Skontaktuj się z Nami</h2>
+        <form id="contactForm" action="#" method="post">
+            <input type="text" name="name" placeholder="Imię i nazwisko" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Telefon">
+            <input type="text" name="company" placeholder="Nazwa firmy">
+            <select name="interest" required>
+                <option value="">Zainteresowany produktem</option>
+                <option value="krzesla">Krzesła</option>
+                <option value="fotele">Fotele</option>
+                <option value="sofy">Sofy</option>
+                <option value="hokery">Hokery</option>
+                <option value="ogrodowe">Meble Ogrodowe</option>
+                <option value="materace">Materace</option>
+                <option value="inne">Inne</option>
+            </select>
+            <textarea name="message" placeholder="Wiadomość" rows="5" required></textarea>
+            <button type="submit">Wyślij Zapytanie</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Meble ATOS. Wszystkie prawa zastrzeżone. | Kontakt: 785913355 | Email: dobrekrzesla.pl@wp.pl</p>
+    </footer>
+
+    <!-- Opcjonalnie: Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Dziękujemy za wiadomość! Skontaktujemy się wkrótce.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

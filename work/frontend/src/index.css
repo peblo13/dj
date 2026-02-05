@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Futuristic theme variables and utility classes */
+:root {
+  --bg-1: #020617;
+  --bg-2: #071032;
+  --accent: #7c3aed; /* violet */
+  --neon: #00e6ff;
+  --glass-bg: rgba(255,255,255,0.03);
+}
+
+html, body, #root { height: 100%; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color: #e6eef8; }
+
+/* Animated layered background */
+.futuristic-bg {
+  background: radial-gradient(ellipse at 10% 10%, rgba(0,230,255,0.04) 0%, transparent 12%),
+              radial-gradient(ellipse at 90% 80%, rgba(124,58,237,0.04) 0%, transparent 16%),
+              linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  position: relative;
+  overflow: hidden;
+}
+
+.futuristic-bg::before {
+  content: '';
+  position: absolute;
+  inset: -30%;
+  background: radial-gradient(circle at 20% 30%, rgba(124,58,237,0.08), transparent 18%),
+              radial-gradient(circle at 80% 70%, rgba(0,230,255,0.06), transparent 16%);
+  animation: float 12s linear infinite;
+  z-index: 0;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8%) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg); }
+}
+
+/* Glass panel */
+.glass {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  z-index: 10;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.glass:focus-within, .glass:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(7,16,50,0.5); }
+
+/* Neon heading */
+.neon-text {
+  color: #e6f7ff;
+  text-shadow: 0 0 8px rgba(0,230,255,0.18), 0 0 20px rgba(124,58,237,0.06);
+  font-family: 'Orbitron', 'Inter', sans-serif;
+}
+
+/* Buttons */
+.btn-neon {
+  background: linear-gradient(90deg, rgba(124,58,237,0.95), rgba(0,230,255,0.9));
+  box-shadow: 0 8px 30px rgba(124,58,237,0.12), 0 6px 12px rgba(0,230,255,0.06);
+  color: white;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.btn-neon:hover { transform: translateY(-3px); box-shadow: 0 18px 50px rgba(124,58,237,0.18), 0 12px 30px rgba(0,230,255,0.08); }
+
+/* Job card */
+.job-card { position: relative; z-index: 10; overflow: hidden; transition: transform 200ms ease, box-shadow 200ms ease; }
+.job-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 30px 60px rgba(2,6,23,0.6); }
+.job-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015)); pointer-events: none; }
+
+/* Skeleton and loading */
+.skeleton { background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.03)); border-radius: 6px; }
+.animate-pulse-slow { animation: pulse 1.8s ease-in-out infinite; }
+@keyframes pulse { 0% { opacity: 0.75; transform: translateY(0); } 50% { opacity: 0.5; transform: translateY(-2px); } 100% { opacity: 0.75; transform: translateY(0); } }
+
+/* Form inputs */
+input[type='text'], input[type='search'], textarea {
+  transition: box-shadow 150ms ease, transform 120ms ease;
+}
+input:focus, textarea:focus {
+  outline: none; box-shadow: 0 4px 30px rgba(0,230,255,0.08), 0 0 0 4px rgba(124,58,237,0.06);
+  transform: translateY(-2px);
+}
+
+/* Accessibility and motion */
+@media (prefers-reduced-motion: reduce) {
+  .futuristic-bg::before, .animate-pulse-slow { animation: none !important; }
+}
+
+/* Responsive typography */
+@media (min-width: 640px) {
+  h1 { font-size: 2.5rem; }
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: 3rem; }
+}
+
+/* small utility */
+.fade-in { animation: fadeIn 450ms ease both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }

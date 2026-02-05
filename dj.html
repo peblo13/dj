@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.youtube.com https://www.soundjay.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https://via.placeholder.com https://open.spotify.com; frame-src https://www.youtube.com https://open.spotify.com; connect-src 'self';">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ [Twoje Imię] - Profesjonalne Usługi DJ na Wydarzenia</title>
+    <meta name="description" content="Profesjonalny DJ na prywatne i korporacyjne wydarzenia. Muzyka na najwyższym poziomie dla Twojej imprezy.">
+    <meta name="keywords" content="DJ, muzyka, wydarzenia, prywatne, korporacyjne, imprezy">
+    <meta name="author" content="DJ [Twoje Imię]">
+    <meta property="og:title" content="DJ [Twoje Imię] - Profesjonalne Usługi DJ">
+    <meta property="og:description" content="Profesjonalny DJ na prywatne i korporacyjne wydarzenia. Muzyka na najwyższym poziomie dla Twojej imprezy.">
+    <meta property="og:image" content="https://example.com/dj-image.jpg">
+    <meta property="og:url" content="https://example.com/dj.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "DJ [Twoje Imię]",
+        "description": "Profesjonalne usługi DJ na prywatne i korporacyjne wydarzenia",
+        "genre": ["Electronic", "Pop", "Rock", "Disco", "House"],
+        "founder": {
+            "@type": "Person",
+            "name": "DJ [Twoje Imię]"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "[Miasto]",
+            "addressCountry": "PL"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+48-123-456-789",
+            "email": "email@example.com",
+            "contactType": "customer service"
+        },
+        "sameAs": [
+            "https://www.instagram.com/djexample",
+            "https://www.facebook.com/djexample",
+            "https://www.youtube.com/djexample"
+        ],
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Wydarzenia Prywatne",
+                "description": "Wesela, urodziny, imprezy domowe"
+            },
+            {
+                "@type": "Offer",
+                "name": "Wydarzenia Korporacyjne",
+                "description": "Konferencje, bankiety, eventy firmowe"
+            }
+        ]
+    }
+    </script>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: rgba(255, 255, 255, 0.1);
+            --accent: #10b981;
+            --text: #ffffff;
+            --text-light: #d1d5db;
+            --bg-dark: #0f172a;
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        [data-theme="light"] {
+            --primary: #4f46e5;
+            --secondary: rgba(0, 0, 0, 0.1);
+            --accent: #059669;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg-dark: #ffffff;
+            --bg-gradient: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+        }
+        [data-theme="light"] body {
+            animation: backgroundShiftLight 25s ease infinite;
+        }
+        body { font-family: 'Courier New', monospace; margin: 0; padding: 0; line-height: 1.6; color: var(--text); background: var(--bg-gradient); background-size: 400% 400%; animation: backgroundShift 15s ease infinite; min-height: 100vh; }
+        html { scroll-behavior: smooth; }
+        header { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); color: var(--text); padding: 3rem 4rem; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        nav { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); position: sticky; top: 0; z-index: 100; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 4rem; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); display: flex; align-items: center; }
+        .logo a { display: flex; align-items: center; gap: 0.75rem; color: inherit; text-decoration: none; }
+        .site-logo { width: 48px; height: 48px; object-fit: contain; transition: filter 0.25s ease, transform 0.25s ease; }
+        .top-site-logo { width: 96px; height: 96px; position: relative; z-index: 2; animation: pulseLogo 2.6s ease-in-out infinite; }
+        /* Logo halo / poświata */
+        .top-logo { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: 1rem 0 0.25rem 0; }
+        .logo-wrap { position: relative; display: inline-block; }
+        .logo-halo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(0.95); width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle at center, rgba(255,215,0,0.55) 0%, rgba(255,200,0,0.35) 30%, rgba(255,170,0,0.18) 55%, rgba(255,170,0,0) 75%); filter: blur(26px) saturate(1.15); box-shadow: 0 10px 50px rgba(255,184,28,0.22); z-index: 1; animation: pulseHalo 3.2s ease-out infinite; opacity: 0.95; }
+
+        /* Play toggle button next to top logo (non-overlapping) */
+        .play-container { display: inline-flex; align-items: center; }
+        .play-toggle { position: relative; right: auto; top: auto; transform: none; z-index: 3; background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.08); color: var(--text); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,0.35); transition: transform 0.18s ease, box-shadow 0.18s ease; }
+        .play-toggle i { font-size: 1.1rem; }
+        .play-toggle.playing { background: radial-gradient(circle at center, rgba(255,215,0,0.95), rgba(255,200,0,0.6)); color: #111827; box-shadow: 0 8px 30px rgba(255,184,28,0.45); transform: scale(1.08); }
+        .play-toggle.playing::after { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(circle, rgba(255,215,0,0.35), rgba(255,200,0,0)); filter: blur(18px); z-index: 2; }
+        @media (max-width: 768px) {
+            .play-container { display: inline-flex; }
+            .play-toggle { width: 42px; height: 42px; }
+            .top-site-logo { width: 72px; height: 72px; }
+        }
+        @keyframes pulseHalo {
+            0% { transform: translate(-50%, -50%) scale(0.90); opacity: 0.60; filter: blur(22px) saturate(1.05); }
+            45% { transform: translate(-50%, -50%) scale(1.18); opacity: 1; filter: blur(30px) saturate(1.3); }
+            100% { transform: translate(-50%, -50%) scale(0.90); opacity: 0.60; filter: blur(22px) saturate(1.05); }
+        }
+
+        @keyframes pulseLogo {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.94); }
+            100% { transform: scale(1); }
+        }
+
+        .top-logo:hover .top-site-logo { transform: scale(1.06); transition: transform 0.18s ease; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .logo-halo, .top-site-logo { animation: none !important; transition: none !important; }
+        }
+
+        /* Ukryj tekst nazwy w pasku nawigacji (wciąż dostępny dla czytników ekranu) */
+        .logo .logo-text { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; border: 0; }
+        /* Nowy widoczny tekst w pasku nawigacji */
+        .nav-logo-text { position: relative; font-weight: 700; color: var(--primary); text-decoration: none; }
+        /* Pokaż tekst logo w stopce */
+        .footer-logo .logo-text { position: static; width: auto; height: auto; overflow: visible; clip: auto; white-space: normal; }
+        .logo i { margin-right: 0.5rem; }
+        /* Top logo area */
+        .top-logo { text-align: center; padding: 1rem 0 0.25rem 0; }
+        @media (max-width: 768px) {
+            .top-site-logo { width: 72px; height: 72px; }
+            .top-logo { padding: 0.75rem 0 0; }
+        }
+        .nav-menu { list-style: none; display: flex; margin: 0; padding: 0; }
+        .nav-menu li { margin: 0 1rem; }
+        .nav-menu a { color: var(--text); text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
+        .nav-menu a:hover { color: var(--accent); }
+        /* Active nav link (scrollspy) */
+        .nav-menu a.active { color: var(--accent); position: relative; }
+        .nav-menu a.active::after { content: ''; position: absolute; left: 0; right: 0; bottom: -6px; height: 3px; background: var(--accent); border-radius: 2px; }
+        /* Ensure focus visible for accessibility */
+        .nav-menu a:focus { outline: 2px solid var(--accent); outline-offset: 4px; }
+        .hamburger { display: none; cursor: pointer; }
+        .bar { display: block; width: 25px; height: 3px; margin: 5px auto; background-color: var(--text); transition: all 0.3s ease; }
+        .hamburger-toggle { display: none; }
+        .theme-toggle { background: none; border: none; color: var(--text); font-size: 1.2rem; cursor: pointer; margin-left: 1rem; transition: color 0.3s ease; }
+        .theme-toggle:hover { color: var(--accent); }
+        .custom-select { position: relative; margin-left: 1rem; }
+        .select-selected { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); color: var(--text); padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem; display: flex; align-items: center; justify-content: space-between; }
+        .select-selected:after { content: '▼'; font-size: 0.7rem; margin-left: 0.5rem; transition: transform 0.3s; }
+        .custom-select.open .select-selected:after { transform: rotate(180deg); }
+        .select-options { position: absolute; top: 100%; left: 0; right: 0; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; margin-top: 0.2rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; z-index: 1000; }
+        .custom-select.open .select-options { max-height: 200px; }
+        .select-option { padding: 0.5rem 1rem; cursor: pointer; transition: background 0.3s; color: var(--text); }
+        .select-option:hover { background: rgba(255, 255, 255, 0.2); }
+        .select-selected:hover, .custom-select.open .select-selected { background: rgba(255, 255, 255, 0.2); border-color: var(--accent); }
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            .nav-menu { position: fixed; left: -100%; top: 70px; flex-direction: column; background-color: var(--bg-dark); width: 100%; text-align: center; transition: 0.3s; box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05); padding: 2rem 0; }
+            .nav-menu li { margin: 1.5rem 0; }
+            .hamburger-toggle:checked ~ .nav-menu { left: 0; }
+            .hamburger-toggle:checked ~ .hamburger .bar:nth-child(2) { opacity: 0; }
+            .hamburger-toggle:checked ~ .hamburger .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+            .hamburger-toggle:checked ~ .hamburger .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+        }
+        header h1 { margin: 0; font-size: 3rem; font-weight: 700; background: linear-gradient(45deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        header p { font-size: 1.3rem; opacity: 0.8; font-weight: 300; }
+        section { padding: 4rem 4rem; max-width: 1200px; margin: 0 auto; animation: fadeInUp 0.8s ease-out; }
+        .about { background: var(--secondary); backdrop-filter: blur(15px); border-radius: 16px; margin: 2rem auto; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); max-width: 800px; opacity: 0.5; }
+        .about h2 { text-align: center; font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary); }
+        h2 i.fas { margin-right: 0.5rem !important; font-family: "Font Awesome 6 Free" !important; font-weight: 900 !important; display: inline-block !important; }
+        .about p { font-size: 1.2rem; text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.8; }
+
+        .services { display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 800px; margin: 2rem auto; }
+        .services h2 { text-align: center; margin-bottom: 2rem; color: var(--primary); }
+        .service { background: var(--secondary); backdrop-filter: blur(15px); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; opacity: 0.5; }
+        .service:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
+        .service h3 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--accent); }
+        .service p { color: var(--text-light); }
+        .events { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin: 2rem auto; max-width: 800px; }
+        .events h2 { text-align: center; margin-bottom: 2rem; color: var(--primary); }
+        .event { background: var(--secondary); backdrop-filter: blur(15px); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease; text-align: center; opacity: 0.5; }
+        button { transition: all 0.3s ease; }
+        button:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
+        .service:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
+        .event:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
+        .testimonial:hover { transform: translateY(-3px); }
+        .gallery-grid img:hover { transform: scale(1.05) rotate(1deg); }
+        .event h3 { color: var(--accent); margin-bottom: 0.5rem; }
+        .event p { margin: 0.5rem 0; color: var(--text-light); }
+        .gallery { margin: 2rem auto; text-align: center; max-width: 800px; }
+        .slider { position: relative; width: 100%; max-width: 600px; margin: 0 auto; overflow: hidden; }
+        .slides { display: flex; transition: transform 0.5s ease; }
+        .slide { min-width: 100%; }
+        .gallery img, .gallery video { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
+        #slide1:checked ~ .slides { transform: translateX(0); }
+        #slide2:checked ~ .slides { transform: translateX(-100%); }
+        #slide3:checked ~ .slides { transform: translateX(-200%); }
+        .navigation { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; }
+        .navigation label { width: 12px; height: 12px; border-radius: 50%; background: rgba(255, 255, 255, 0.5); margin: 0 5px; cursor: pointer; transition: background 0.3s ease; }
+        .navigation label:hover { background: var(--primary); }
+        #slide1:checked ~ .navigation label[for="slide1"],
+        #slide2:checked ~ .navigation label[for="slide2"],
+        #slide3:checked ~ .navigation label[for="slide3"] { background: var(--primary); }
+        .testimonials { background: var(--secondary); backdrop-filter: blur(15px); border-radius: 16px; margin: 2rem auto; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); max-width: 800px; opacity: 0.5; }
+        .testimonial { margin-bottom: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 12px; border-left: 4px solid var(--accent); }
+        .testimonial p { font-style: italic; margin-bottom: 1rem; }
+        .testimonial cite { font-weight: 600; color: var(--accent); }
+        .contact { background: var(--secondary); backdrop-filter: blur(15px); border-radius: 16px; margin: 2rem auto; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); max-width: 800px; opacity: 0.5; }
+        .about-me { background: var(--secondary); backdrop-filter: blur(15px); border-radius: 16px; margin: 2rem auto; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); max-width: 1000px; opacity: 0.5; }
+        .about-content { display: flex; align-items: center; gap: 2rem; }
+        .dj-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; }
+        .bio { flex: 1; }
+        .social-links { margin-top: 1rem; }
+        .social-links a { margin-right: 1rem; font-size: 1.5rem; color: var(--accent); transition: color 0.3s; }
+        .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
+        .social-links a { color: var(--text); font-size: 1.5rem; transition: color 0.3s; }
+        .social-links a:hover { color: var(--accent); }
+        /* Footer layout */
+        footer { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 4rem; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.06); }
+        .footer-logo { display: flex; align-items: center; }
+        .footer-site-logo { width: 40px; height: 40px; }
+        @media (max-width: 768px) {
+            footer { flex-direction: column; text-align: center; }
+        }
+        .social-share { margin-top: 1rem; }
+        .social-share p { margin-bottom: 0.5rem; font-size: 0.9rem; }
+        .social-share a { margin-right: 1rem; color: var(--text); font-size: 1.2rem; transition: color 0.3s; }
+        .social-share a:hover { color: var(--accent); }
+        .faq { background: var(--secondary); backdrop-filter: blur(15px); border-radius: 16px; margin: 2rem auto; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); max-width: 800px; opacity: 0.5; }
+        .faq-item { margin-bottom: 1.5rem; opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .faq-item h3 { color: var(--accent); cursor: pointer; position: relative; }
+        .faq-item h3::after { content: '+'; position: absolute; right: 0; transition: transform 0.3s; }
+        .faq-item.active h3::after { content: '-'; transform: rotate(180deg); }
+        .faq-item p { margin-top: 0.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .music { background: var(--secondary); backdrop-filter: blur(15px); border-radius: 16px; margin: 2rem auto; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); max-width: 1000px; opacity: 0.5; text-align: center; }
+        .music iframe { margin: 1rem; }
+        .audio-playlist { display: flex; flex-direction: column; gap: 1rem; margin: 1rem 0; }
+        .audio-playlist audio { width: 100%; max-width: 400px; }
+        .photo-gallery { background: var(--secondary); backdrop-filter: blur(15px); border-radius: 16px; margin: 2rem auto; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); max-width: 1000px; opacity: 0.5; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+        .gallery-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s; }
+        .gallery-grid img:hover { transform: scale(1.05); }
+        .location { background: var(--secondary); backdrop-filter: blur(15px); border-radius: 16px; margin: 2rem auto; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); max-width: 1000px; opacity: 0.5; text-align: center; }
+        .newsletter { background: var(--secondary); backdrop-filter: blur(15px); border-radius: 16px; margin: 2rem auto; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); max-width: 600px; opacity: 0.5; text-align: center; }
+        #newsletterForm { display: flex; gap: 1rem; justify-content: center; }
+        #newsletterForm input { flex: 1; padding: 0.5rem; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.2); }
+        #newsletterForm button { background: var(--primary); color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+        form { max-width: 600px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        form input, form select, form textarea { padding: 1rem; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; background: rgba(255, 255, 255, 0.05); color: var(--text); font-size: 1rem; transition: border-color 0.3s ease; }
+        form textarea { grid-column: span 2; }
+        form input:focus, form select:focus, form textarea:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1); }
+        button { background: linear-gradient(45deg, var(--primary), var(--accent)); color: #fff; border: none; padding: 1rem 2rem; border-radius: 8px; cursor: pointer; font-size: 1.1rem; font-weight: 600; transition: transform 0.2s ease; grid-column: span 2; }
+        button:hover { transform: translateY(-2px); }
+        footer { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); color: var(--text); text-align: center; padding: 2rem 4rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .social-links { margin-top: 1rem; }
+        .social-links a { color: var(--text); font-size: 1.5rem; margin: 0 1rem; transition: color 0.3s ease; text-decoration: none; }
+        .social-links a:hover { color: var(--accent); }
+        .scroll-top { position: fixed; bottom: 2rem; right: 2rem; background: var(--primary); color: #fff; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: none; z-index: 1000; transition: background 0.3s ease; font-size: 1.2rem; }
+        .scroll-top:hover { background: var(--accent); }
+        .cookie-consent { position: fixed; bottom: 0; left: 0; width: 100%; background: var(--bg-dark); color: var(--text); padding: 1rem; text-align: center; z-index: 1001; border-top: 1px solid rgba(255, 255, 255, 0.1); display: none; }
+        .cookie-consent.show { display: block; }
+        .cookie-consent button { background: var(--primary); color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; margin-left: 1rem; }
+        .cookie-consent button:hover { background: var(--accent); }
+        .loading { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-dark); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.5s ease; }
+        .spinner { width: 50px; height: 50px; border: 5px solid rgba(255, 255, 255, 0.3); border-top: 5px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; }
+        .loading p { color: var(--text); margin-top: 1rem; font-size: 1.2rem; }
+        .progress-bar { width: 300px; height: 8px; background: rgba(255, 255, 255, 0.2); border-radius: 4px; margin-top: 1rem; overflow: hidden; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 4px; width: 0%; transition: width 0.1s ease; }
+        .progress-text { color: var(--text); margin-top: 0.5rem; font-size: 1rem; }
+        .loading.hidden { opacity: 0; pointer-events: none; }
+        .background-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.2; pointer-events: none; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes backgroundShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        @keyframes backgroundShiftLight { 
+            0% { background-position: 0% 50%; background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%); }
+            25% { background-position: 50% 0%; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #f3f4f6 100%); }
+            50% { background-position: 100% 50%; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #f3f4f6 100%); }
+            75% { background-position: 50% 100%; background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 50%, #f3f4f6 100%); }
+            100% { background-position: 0% 50%; background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%); }
+        }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @media (max-width: 768px) { 
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1.1rem; }
+            .services { grid-template-columns: 1fr; }
+            section { padding: 3rem 1rem; }
+            form { grid-template-columns: 1fr; }
+            form textarea { grid-column: span 1; }
+            button { grid-column: span 1; }
+        }
+        @media (max-width: 480px) {
+            header { padding: 2rem 1rem; }
+            header h1 { font-size: 2rem; }
+            header p { font-size: 1rem; }
+            .nav-container { padding: 1rem; }
+            .logo { font-size: 1.2rem; }
+            section { padding: 2rem 1rem; }
+            .about h2 { font-size: 2rem; }
+            .about p { font-size: 1rem; }
+            .services h2 { font-size: 1.8rem; }
+            .service h3 { font-size: 1.5rem; }
+            .events h2 { font-size: 1.8rem; }
+            .faq h2 { font-size: 1.8rem; }
+            .music h2 { font-size: 1.8rem; }
+            .photo-gallery h2 { font-size: 1.8rem; }
+            .location h2 { font-size: 1.8rem; }
+            .newsletter h2 { font-size: 1.8rem; }
+            .contact h2 { font-size: 1.8rem; }
+            .about-me h2 { font-size: 1.8rem; }
+            .dj-photo { width: 100%; max-width: 250px; }
+            .bio { font-size: 0.9rem; }
+            .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+            .music iframe { width: 100%; height: auto; max-width: 100%; }
+            form input, form textarea { font-size: 1rem; }
+            button { font-size: 1rem; padding: 0.8rem; }
+            .testimonial p { font-size: 0.9rem; }
+            .faq-item h3 { font-size: 1rem; }
+            .faq-item p { font-size: 0.9rem; }
+        }
+        /* Focus indicators for accessibility */
+        .nav-menu a:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+        .theme-toggle:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+        .select-selected:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+        button:focus, input:focus, textarea:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+        /* Toast notifications */
+        .toast { position: fixed; top: 20px; right: 20px; padding: 1rem 1.5rem; border-radius: 8px; color: white; font-weight: 500; z-index: 10000; transform: translateX(100%); opacity: 0; transition: all 0.3s ease; backdrop-filter: blur(10px); }
+        .toast-success { background: rgba(34, 197, 94, 0.9); }
+        .toast-error { background: rgba(239, 68, 68, 0.9); }
+        .toast.show { transform: translateX(0); opacity: 1; }
+    </style>
+</head>
+<body>
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p data-lang="loading-text">Ładowanie...</p>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <p class="progress-text" id="progress-text">1%</p>
+    </div>
+    <canvas id="background-canvas" class="background-animation"></canvas>
+    <div class="top-logo">
+        <div class="logo-wrap">
+            <div class="logo-halo" aria-hidden="true"></div>
+            <a href="#" aria-label="top-logo-link">
+                <picture>
+                    <source srcset="assets/logo_dj.png" type="image/png">
+                    <img src="assets/logo_dj.svg" alt="Logo DJ" class="site-logo top-site-logo">
+                </picture>
+            </a>
+        </div>
+        <div class="play-container">
+            <button id="play-toggle" class="play-toggle" aria-pressed="false" aria-label="Odtwórz muzykę">
+                <i class="fas fa-play" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <header>
+        <h1 data-lang="header-title">DJ [Twoje Imię]</h1>
+        <p data-lang="header-subtitle">Profesjonalne usługi DJ na Twoje wydarzenie</p>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" aria-hidden="true"></div>
+            <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
+            <label for="hamburger-toggle" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <div class="custom-select" id="language-select">
+                <div class="select-selected" data-value="pl">PL</div>
+                <div class="select-options">
+                    <div class="select-option" data-value="pl">PL</div>
+                    <div class="select-option" data-value="en">EN</div>
+                    <div class="select-option" data-value="ru">RU</div>
+                </div>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" data-aria-label="theme-toggle-label" aria-label="Przełącz tryb"><i class="fas fa-moon"></i></button>
+            <ul class="nav-menu">
+                <li><a href="#about" data-lang="nav-about">O mnie</a></li>
+                <li><a href="#audio" data-lang="nav-music">Muzyka</a></li>
+                <li><a href="#services" data-lang="nav-services">Usługi</a></li>
+                <li><a href="#events" data-lang="nav-events">Wydarzenia</a></li>
+                <li><a href="#gallery" data-lang="nav-gallery">Galeria</a></li>
+                <li><a href="#photo-gallery" data-lang="nav-photos">Zdjęcia</a></li>
+                <li><a href="#testimonials" data-lang="nav-testimonials">Opinie</a></li>
+                <li><a href="#faq" data-lang="nav-faq">FAQ</a></li>
+                <li><a href="#location" data-lang="nav-location">Lokalizacja</a></li>
+                <li><a href="#newsletter" data-lang="nav-newsletter">Newsletter</a></li>
+                <li><a href="#contact" data-lang="nav-contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="about-me" id="about">
+        <h2 data-lang="about-title"><i class="fas fa-user" style="margin-right: 0.5rem;"></i>O Mnie</h2>
+        <div class="about-content">
+            <img src="https://via.placeholder.com/300x300?text=DJ+Photo" alt="DJ [Twoje Imię]" class="dj-photo">
+            <div class="bio">
+                <p data-lang="about-bio1">Cześć! Jestem DJ [Twoje Imię], pasjonat muzyki elektronicznej z wieloletnim doświadczeniem. Specjalizuję się w tworzeniu niezapomnianych atmosfer na weselach, imprezach firmowych i eventach prywatnych. Moja misja to sprawić, aby każdy moment był magiczny!</p>
+                <p data-lang="about-bio2">Doświadczenie: 10+ lat w branży, setki zadowolonych klientów.</p>
+                <div class="social-links">
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-facebook"></a>
+                    <a href="#" class="fab fa-tiktok"></a>
+                    <a href="#" class="fab fa-youtube"></a>
+                </div>
+                <div class="social-share">
+                    <p>Podziel się stroną:</p>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com/dj.html" target="_blank" class="fab fa-facebook" aria-label="Udostępnij na Facebooku"></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://example.com/dj.html&text=Sprawdź DJ [Twoje Imię]!" target="_blank" class="fab fa-twitter" aria-label="Udostępnij na Twitterze"></a>
+                    <a href="https://wa.me/?text=Sprawdź DJ [Twoje Imię]: https://example.com/dj.html" target="_blank" class="fab fa-whatsapp" aria-label="Udostępnij na WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="music" id="audio">
+        <h2 data-lang="music-title"><i class="fas fa-music" style="margin-right: 0.5rem;"></i>Moja Muzyka</h2>
+        <p data-lang="music-listen-samples">Słuchaj próbek mojej muzyki!</p>
+        <div class="audio-playlist">
+            <audio controls>
+                <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+                Twoja przeglądarka nie obsługuje elementu audio.
+            </audio>
+            <audio controls>
+                <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+                Twoja przeglądarka nie obsługuje elementu audio.
+            </audio>
+        </div>
+        <p data-lang="music-listen-platforms">Posłuchaj moich miksów na YouTube i Spotify!</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="DJ Mix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0XUsuxWHRQd" width="300" height="380" frameborder="0" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </section>
+
+    <section class="services" id="services">
+        <h2 data-lang="services-title"><i class="fas fa-cogs" style="margin-right: 0.5rem;"></i>Usługi</h2>
+        <div class="service">
+            <i class="fas fa-heart fa-4x" style="color: var(--primary); margin-bottom: 1rem; animation: pulse 2s infinite;"></i>
+            <h3 data-lang="services-private-title">Wydarzenia Prywatne</h3>
+            <p data-lang="services-private-desc">Wesela, urodziny, imprezy domowe. Muzyka dopasowana do gustu gości.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-briefcase fa-4x" style="color: var(--primary); margin-bottom: 1rem; animation: pulse 2s infinite;"></i>
+            <h3 data-lang="services-corporate-title">Wydarzenia Korporacyjne</h3>
+            <p data-lang="services-corporate-desc">Konferencje, bankiety, eventy firmowe. Profesjonalna oprawa muzyczna.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-star fa-4x" style="color: var(--primary); margin-bottom: 1rem; animation: pulse 2s infinite;"></i>
+            <h3 data-lang="services-other-title">Inne Wydarzenia</h3>
+            <p data-lang="services-other-desc">Festiwale, koncerty, eventy specjalne. Dostosowane do potrzeb.</p>
+        </div>
+    </section>
+
+    <section class="events" id="events">
+        <h2 data-lang="events-title"><i class="fas fa-calendar-alt" style="margin-right: 0.5rem;"></i>Nadchodzące Wydarzenia</h2>
+        <div class="event">
+            <h3 data-lang="event1-title">Wesele Anny i Marka</h3>
+            <p data-lang="event1-details"><i class="fas fa-calendar"></i> 15 marca 2026 | <i class="fas fa-map-marker-alt"></i> Restauracja Wierzynek, Kraków</p>
+            <p data-lang="event1-desc">Ślub i wesele z muzyką na żywo!</p>
+        </div>
+        <div class="event">
+            <h3 data-lang="event2-title">Konferencja TechExpo</h3>
+            <p data-lang="event2-details"><i class="fas fa-calendar"></i> 22 kwietnia 2026 | <i class="fas fa-map-marker-alt"></i> Hala EXPO, Warszawa</p>
+            <p data-lang="event2-desc">Oprawa muzyczna dla eventu korporacyjnego.</p>
+        </div>
+        <div class="event">
+            <h3 data-lang="event3-title">Festiwal Muzyczny RetroWave</h3>
+            <p data-lang="event3-details"><i class="fas fa-calendar"></i> 10 maja 2026 | <i class="fas fa-map-marker-alt"></i> Park Jordana, Kraków</p>
+            <p data-lang="event3-desc">Główny DJ na festiwalu muzyki retro.</p>
+        </div>
+        <div class="event">
+            <h3 data-lang="event4-title">Urodziny 30-lecia Jana</h3>
+            <p data-lang="event4-details"><i class="fas fa-calendar"></i> 5 czerwca 2026 | <i class="fas fa-map-marker-alt"></i> Klub Muzyczny, Gdańsk</p>
+            <p data-lang="event4-desc">Impreza urodzinowa z setami DJ.</p>
+        </div>
+        <div class="event">
+            <h3 data-lang="event5-title">Bal Absolwentów</h3>
+            <p data-lang="event5-details"><i class="fas fa-calendar"></i> 20 lipca 2026 | <i class="fas fa-map-marker-alt"></i> Sala Balowa, Poznań</p>
+            <p data-lang="event5-desc">Taniec i muzyka na studenckim balu.</p>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h2 data-lang="gallery-title"><i class="fas fa-images" style="margin-right: 0.5rem;"></i>Galeria</h2>
+        <div class="slider">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <div class="slides">
+                <div class="slide">
+                    <img src="placeholder1.jpg" alt="Wydarzenie 1">
+                </div>
+                <div class="slide">
+                    <video controls>
+                        <source src="placeholder.mp4" type="video/mp4">
+                        Twój przeglądarka nie obsługuje wideo.
+                    </video>
+                </div>
+                <div class="slide">
+                    <img src="placeholder2.jpg" alt="Wydarzenie 2">
+                </div>
+            </div>
+            <div class="navigation">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <h2 data-lang="testimonials-title"><i class="fas fa-comments" style="margin-right: 0.5rem;"></i>Opinie Klientów</h2>
+        <div class="testimonial">
+            <p data-lang="testimonial1-text">"Niesamowita energia! DJ [Twoje Imię] sprawił, że nasze wesele było niezapomniane. Goście tańczyli całą noc!"</p>
+            <cite data-lang="testimonial1-author">- Anna & Marek</cite>
+        </div>
+        <div class="testimonial">
+            <p data-lang="testimonial2-text">"Profesjonalizm na najwyższym poziomie. Muzyka idealnie dopasowana do atmosfery eventu korporacyjnego."</p>
+            <cite data-lang="testimonial2-author">- Firma XYZ</cite>
+        </div>
+        <div class="testimonial">
+            <p data-lang="testimonial3-text">"Polecam wszystkim! Świetny DJ z doskonałym wyczuciem rytmu i szerokim repertuarem."</p>
+            <cite data-lang="testimonial3-author">- Kasia</cite>
+        </div>
+        <div class="testimonial">
+            <p data-lang="testimonial4-text">"Impreza urodzinowa córki była hitem! DJ wiedział, jak zaangażować młodzież i dorosłych."</p>
+            <cite data-lang="testimonial4-author">- Rodzina Nowak</cite>
+        </div>
+        <div class="testimonial">
+            <p data-lang="testimonial5-text">"Doskonała współpraca, kreatywne podejście do playlisty. Event przeszedł nasze oczekiwania."</p>
+            <cite data-lang="testimonial5-author">- Event Agency ABC</cite>
+        </div>
+        <div class="testimonial">
+            <p data-lang="testimonial6-text">"Muzyka na żywo z DJ-em to coś wyjątkowego. Atmosfera była elektryzująca!"</p>
+            <cite data-lang="testimonial6-author">- Tomek</cite>
+        </div>
+    </section>
+
+
+
+    <section class="faq" id="faq">
+        <h2 data-lang="faq-title"><i class="fas fa-question-circle" style="margin-right: 0.5rem;"></i>FAQ - Najczęściej Zadawane Pytania</h2>
+        <div class="faq-item">
+            <h3 data-lang="faq1-question">Jakie są koszty wynajęcia DJ-a?</h3>
+            <p data-lang="faq1-answer">Ceny zależą od typu eventu i długości. Kontaktuj się po szczegóły – oferuję konkurencyjne stawki!</p>
+        </div>
+        <div class="faq-item">
+            <h3 data-lang="faq2-question">Jakie style muzyczne obsługujesz?</h3>
+            <p data-lang="faq2-answer">Pop, rock, disco, house, techno – wszystko, co pasuje do atmosfery Twojej imprezy.</p>
+        </div>
+        <div class="faq-item">
+            <h3 data-lang="faq3-question">Czy potrzebujesz sprzętu?</h3>
+            <p data-lang="faq3-answer">Tak, przywożę profesjonalny sprzęt nagłaśniający i oświetlenie.</p>
+        </div>
+        <div class="faq-item">
+            <h3 data-lang="faq4-question">Jak zarezerwować termin?</h3>
+            <p data-lang="faq4-answer">Użyj formularza kontaktowego lub zadzwoń – potwierdzę dostępność w 24h.</p>
+        </div>
+    </section>
+
+
+
+    <section class="photo-gallery" id="photo-gallery">
+        <h2 data-lang="photo-gallery-title"><i class="fas fa-camera" style="margin-right: 0.5rem;"></i>Galeria Zdjęć z Wydarzeń</h2>
+        <div class="gallery-grid">
+            <img src="https://via.placeholder.com/300x200?text=Event+1" alt="Zdjęcie z wesela DJ - szczęśliwa para tańcząca" loading="lazy">
+            <img src="https://via.placeholder.com/300x200?text=Event+2" alt="DJ na scenie podczas eventu korporacyjnego" loading="lazy">
+            <img src="https://via.placeholder.com/300x200?text=Event+3" alt="Tłum gości bawiących się na imprezie" loading="lazy">
+            <img src="https://via.placeholder.com/300x200?text=Event+4" alt="DJ miksujący muzykę na żywo" loading="lazy">
+            <img src="https://via.placeholder.com/300x200?text=Event+5" alt="Dekoracja sali weselnej z oświetleniem" loading="lazy">
+            <img src="https://via.placeholder.com/300x200?text=Event+6" alt="Grupa przyjaciół świętujących urodziny" loading="lazy">
+        </div>
+    </section>
+
+    <section class="location" id="location">
+        <h2 data-lang="location-title"><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>Lokalizacja</h2>
+        <p data-lang="location-desc">Działam głównie w [Miasto], ale jestem otwarty na wyjazdy.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.123456789012!2d19.123456!3d52.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDQ3JzIyLjAiTiAxOcKwMDcnMjIuMCJF!5e0!3m2!1spl!2spl!4v1234567890123!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+        <h2 data-lang="newsletter-title"><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>Newsletter</h2>
+        <p data-lang="newsletter-desc">Zapisz się, aby otrzymywać info o nowych eventach i promocjach!</p>
+        <form id="newsletterForm">
+            <input type="email" placeholder="Twój email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <button type="submit" data-lang="newsletter-subscribe">Zapisz się</button>
+        </form>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 data-lang="contact-title"><i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>Zgłoszenie</h2>
+        <form id="bookingForm" action="#" method="post">
+            <input type="text" name="name" data-placeholder="contact-name-placeholder" placeholder="Imię" minlength="2" required>
+            <input type="text" name="contact" data-placeholder="contact-contact-placeholder" placeholder="Email lub telefon" pattern="^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})|(\+?[0-9\s\-\(\)]{7,})$" required>
+            <input type="date" name="date" required min="<?php echo date('Y-m-d'); ?>">
+            <input type="text" name="location" data-placeholder="contact-location-placeholder" placeholder="Lokalizacja (miasto / venue)" minlength="3" required>
+            <input type="number" name="hours" data-placeholder="contact-hours-placeholder" placeholder="Liczba godzin" min="1" max="24" required>
+            <select name="type" required>
+                <option value="" data-lang="contact-type-placeholder">Typ wydarzenia</option>
+                <option value="prywatne" data-lang="contact-type-private">Prywatne</option>
+                <option value="korporacyjne" data-lang="contact-type-corporate">Korporacyjne</option>
+                <option value="inne" data-lang="contact-type-other">Inne</option>
+            </select>
+            <textarea name="comment" data-placeholder="contact-comment-placeholder" placeholder="Komentarz" rows="4" maxlength="500"></textarea>
+            <button type="submit" data-lang="contact-submit">Wyślij Zgłoszenie</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <a href="#" aria-label="footer-logo-link">
+                <picture>
+                    <source srcset="assets/logo_dj.png" type="image/png">
+                    <img src="assets/logo_dj.svg" alt="Logo DJ" class="site-logo footer-site-logo">
+                </picture>
+            </a>
+        </div>
+        <p data-lang="footer-copyright">&copy; 2026 DJ [Twoje Imię]. Kontakt: email@example.com | Tel: 123-456-789</p>
+        <div class="social-links">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-youtube"></a>
+            <a href="#" class="fab fa-spotify"></a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = this.name.value.trim();
+            const email = this.email.value.trim();
+            const phone = this.phone.value.trim();
+            const eventType = this.eventType.value;
+            const date = this.date.value;
+            const comment = this.comment.value.trim();
+
+            if (!name || !email || !phone || !eventType || !date) {
+                alert('Proszę wypełnić wszystkie wymagane pola.');
+                return;
+            }
+            if (!/\S+@\S+\.\S+/.test(email)) {
+                alert('Proszę podać prawidłowy adres email.');
+                return;
+            }
+            if (!/^\d{9,}$/.test(phone.replace(/\s/g, ''))) {
+                alert('Proszę podać prawidłowy numer telefonu (co najmniej 9 cyfr).');
+                return;
+            }
+            alert('Dziękujemy za zgłoszenie! Skontaktujemy się wkrótce.');
+            this.reset();
+        });
+
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            element.textContent = '';
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        function startTyping() {
+            const elements = document.querySelectorAll('h1, h2, h3, p, cite');
+            elements.forEach((el, index) => {
+                const text = el.textContent;
+                el.textContent = '';
+                setTimeout(() => {
+                    typeWriter(el, text);
+                }, index * 500); // Opóźnienie dla każdego elementu
+            });
+        }
+
+        // Auto-slide for gallery
+        let slideIndex = 1;
+        function autoSlide() {
+            slideIndex++;
+            if (slideIndex > 3) slideIndex = 1;
+            document.getElementById('slide' + slideIndex).checked = true;
+            setTimeout(autoSlide, 4000); // Change slide every 4 seconds
+        }
+        setTimeout(autoSlide, 4000);
+
+        window.addEventListener('load', () => {
+            const loading = document.getElementById('loading');
+            const progressFill = document.getElementById('progress-fill');
+            const progressText = document.getElementById('progress-text');
+            let progress = 0;
+
+            const updateProgress = () => {
+                progress += Math.random() * 15; // Random increment for realism
+                if (progress > 100) progress = 100;
+                progressFill.style.width = progress + '%';
+                progressText.textContent = Math.round(progress) + '%';
+
+                if (progress < 100) {
+                    setTimeout(updateProgress, 100 + Math.random() * 200); // Random delay
+                } else {
+                    setTimeout(() => {
+                        loading.classList.add('hidden');
+                        startTyping();
+                    }, 500); // Short delay after 100%
+                }
+            };
+
+            updateProgress();
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const savedTheme = 'dark'; // Zawsze startuj z ciemnym trybem
+        html.setAttribute('data-theme', savedTheme);
+        localStorage.setItem('theme', savedTheme); // Zapisz ciemny
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+            updateBackgroundColors(newTheme);
+            setLogoForTheme(newTheme);
+        });
+
+        // Funkcja do aktualizacji kolorów tła SVG
+        function updateBackgroundColors(theme) {
+            const points = document.querySelectorAll('.point');
+            const lines = document.querySelectorAll('.line');
+            if (theme === 'light') {
+                points.forEach(point => point.setAttribute('fill', '#4f46e5')); // Ciemniejszy niebieski dla jasnego trybu
+                lines.forEach(line => line.setAttribute('stroke', 'url(#lineGradientLight)'));
+            } else {
+                points.forEach(point => point.setAttribute('fill', '#00ffff')); // Neonowy dla ciemnego
+                lines.forEach(line => line.setAttribute('stroke', 'url(#lineGradient)'));
+            }
+        }
+
+        // Ustaw kolory na start
+        updateBackgroundColors(savedTheme);
+        // Automatyczna zmiana logo zależna od motywu
+        function setLogoForTheme(theme) {
+            const selectors = ['.top-logo picture', '.footer-logo picture', '.logo picture'];
+            selectors.forEach(sel => {
+                document.querySelectorAll(sel).forEach(p => {
+                    const source = p.querySelector('source');
+                    const img = p.querySelector('img');
+                    if (!img) return;
+                    if (theme === 'light') {
+                        if (source) source.srcset = 'assets/logo_dj_light.png';
+                        img.src = 'assets/logo_dj_light.svg';
+                    } else {
+                        if (source) source.srcset = 'assets/logo_dj.png';
+                        img.src = 'assets/logo_dj.svg';
+                    }
+                });
+            });
+        }
+        // Ustaw logo na start
+        setLogoForTheme(savedTheme);
+
+        // Audio play-toggle (uses local file if available, otherwise WebAudio fallback)
+        const playToggle = document.getElementById('play-toggle');
+        let audioEl = null;
+        let audioCtx = null;
+        let audioSource = null;
+        let webaudioPlaying = false;
+
+        async function tryLoadAudioFile() {
+            try {
+                const res = await fetch('/assets/I_feel_good_alright.mp3', { method: 'HEAD' });
+                if (res.ok) return true;
+            } catch (e) {
+                // ignore
+            }
+            try {
+                const res2 = await fetch('/assets/I_feel_good_alright.mp3');
+                if (res2.ok) return true;
+            } catch(e) {
+                return false;
+            }
+            return false;
+        }
+
+        async function initAudio() {
+            const hasFile = await tryLoadAudioFile();
+            if (hasFile) {
+                audioEl = new Audio('/assets/I_feel_good_alright.mp3');
+                audioEl.loop = true;
+                audioEl.preload = 'none';
+                audioEl.autoplay = false; // ensure no autoplay
+                audioEl.volume = 0.45;
+            } else {
+                // setup WebAudio background loop (simple warm pad)
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                const gain = audioCtx.createGain();
+                gain.gain.value = 0.0; // start muted until play
+                gain.connect(audioCtx.destination);
+
+                // create two oscillators detuned for a pad
+                const o1 = audioCtx.createOscillator();
+                const o2 = audioCtx.createOscillator();
+                const g1 = audioCtx.createGain();
+                const g2 = audioCtx.createGain();
+                o1.type = 'sine'; o2.type = 'sine';
+                o1.frequency.value = 110; o2.frequency.value = 220 * 0.5; // octaves
+                o1.detune.value = -7; o2.detune.value = 9;
+                g1.gain.value = 0.18; g2.gain.value = 0.12;
+                const lfo = audioCtx.createOscillator();
+                const lfoGain = audioCtx.createGain();
+                lfo.type = 'sine'; lfo.frequency.value = 0.15; lfoGain.gain.value = 0.05;
+                lfo.connect(lfoGain);
+                lfoGain.connect(g1.gain);
+                lfoGain.connect(g2.gain);
+
+                o1.connect(g1); g1.connect(gain);
+                o2.connect(g2); g2.connect(gain);
+                audioSource = { ctx: audioCtx, o1, o2, g1, g2, gain, lfo };
+            }
+
+            // Safety: ensure nothing is playing on init
+            ensureAudioStopped();
+        }
+
+        function startWebAudio() {
+            if (!audioSource) return;
+            const now = audioCtx.currentTime;
+            audioSource.o1.start(now + 0.01);
+            audioSource.o2.start(now + 0.01);
+            audioSource.lfo.start(now + 0.01);
+            audioSource.gain.gain.cancelScheduledValues(now);
+            audioSource.gain.gain.linearRampToValueAtTime(0.28, now + 1.5);
+            webaudioPlaying = true;
+        }
+
+        function stopWebAudio() {
+            if (!audioSource) return;
+            const now = audioCtx.currentTime;
+            audioSource.gain.gain.cancelScheduledValues(now);
+            audioSource.gain.gain.linearRampToValueAtTime(0.0, now + 1.2);
+            webaudioPlaying = false;
+            // don't stop oscillators to allow quick restart
+        }
+
+        async function togglePlay() {
+            if (!audioEl && !audioCtx) await initAudio();
+            if (audioEl) {
+                if (audioEl.paused) {
+                    try {
+                        const p = audioEl.play();
+                        if (p && p.then) await p;
+                        // only mark playing after successful play
+                        playToggle.classList.add('playing');
+                        playToggle.setAttribute('aria-pressed','true');
+                        playToggle.querySelector('i').className = 'fas fa-pause';
+                    } catch (e) {
+                        console.warn('Playback failed or was blocked by browser autoplay policy', e);
+                        // ensure UI reflects stopped state
+                        playToggle.classList.remove('playing');
+                        playToggle.setAttribute('aria-pressed','false');
+                        playToggle.querySelector('i').className = 'fas fa-play';
+                    }
+                } else {
+                    audioEl.pause();
+                    playToggle.classList.remove('playing');
+                    playToggle.setAttribute('aria-pressed','false');
+                    playToggle.querySelector('i').className = 'fas fa-play';
+                }
+            } else if (audioCtx) {
+                if (!webaudioPlaying) {
+                    if (audioCtx.state === 'suspended') await audioCtx.resume();
+                    startWebAudio();
+                    playToggle.classList.add('playing');
+                    playToggle.setAttribute('aria-pressed','true');
+                    playToggle.querySelector('i').className = 'fas fa-pause';
+                } else {
+                    stopWebAudio();
+                    // keep oscillators alive but visually paused
+                    playToggle.classList.remove('playing');
+                    playToggle.setAttribute('aria-pressed','false');
+                    playToggle.querySelector('i').className = 'fas fa-play';
+                }
+            }
+        }
+
+        playToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            togglePlay();
+        });
+
+        // Ensure UI and audio are stopped / not playing
+        function ensureAudioStopped() {
+            try {
+                if (audioEl) {
+                    audioEl.pause();
+                    audioEl.currentTime = 0;
+                }
+            } catch (e) { /* ignore */ }
+            try {
+                if (audioCtx && audioCtx.state !== 'suspended') {
+                    audioCtx.suspend();
+                }
+            } catch (e) { /* ignore */ }
+            if (playToggle) {
+                playToggle.classList.remove('playing');
+                playToggle.setAttribute('aria-pressed','false');
+                const ico = playToggle.querySelector('i'); if (ico) ico.className = 'fas fa-play';
+            }
+            webaudioPlaying = false;
+        }
+
+        // Initialize silently (no autoplay). This prepares audio if file exists but doesn't play.
+        initAudio();
+        // Extra safeguard in case a browser auto-started audio earlier
+        window.addEventListener('load', () => { ensureAudioStopped(); });
+        document.addEventListener('visibilitychange', () => { if (document.hidden) ensureAudioStopped(); });
+
+        // Animacje wejścia dla sekcji
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Scrollspy (active nav link) + smooth scrolling with offset for sticky nav
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        const spySections = Array.from(document.querySelectorAll('section[id]'));
+
+        function navHeight() {
+            const n = document.querySelector('nav');
+            return n ? n.offsetHeight : 70;
+        }
+
+        let spyObserver;
+        function initSpy() {
+            if (spyObserver) spyObserver.disconnect();
+            spyObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const id = entry.target.id;
+                    const link = document.querySelector(`.nav-menu a[href="#${id}"]`);
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        if (link) link.classList.add('active');
+                    }
+                });
+            }, { root: null, rootMargin: `-${navHeight()}px 0px -40% 0px`, threshold: 0.1 });
+
+            spySections.forEach(s => spyObserver.observe(s));
+        }
+
+        initSpy();
+        window.addEventListener('resize', () => { initSpy(); });
+
+        // Smooth scroll with offset (and close mobile nav on click)
+        navLinks.forEach(a => {
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                const id = a.getAttribute('href').slice(1);
+                const el = document.getElementById(id);
+                if (!el) return;
+                const top = el.getBoundingClientRect().top + window.pageYOffset - navHeight() - 8;
+                window.scrollTo({ top, behavior: 'smooth' });
+                const burger = document.getElementById('hamburger-toggle');
+                if (burger) burger.checked = false;
+            });
+        });
+
+        // Animacje dla FAQ items z opóźnieniem
+        const faqObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 200); // Opóźnienie 200ms dla każdego kolejnego
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.faq-item').forEach(item => {
+            faqObserver.observe(item);
+        });
+
+        // Accordion dla FAQ
+        document.querySelectorAll('.faq-item h3').forEach(h3 => {
+            h3.addEventListener('click', () => {
+                const item = h3.parentElement;
+                const p = h3.nextElementSibling;
+                item.classList.toggle('active');
+                if (item.classList.contains('active')) {
+                    p.style.maxHeight = p.scrollHeight + 'px';
+                } else {
+                    p.style.maxHeight = '0';
+                }
+            });
+        });
+
+        // Scroll to top
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Cookie consent
+        const cookieConsent = document.getElementById('cookie-consent');
+        const acceptBtn = document.getElementById('accept-cookies');
+        if (!localStorage.getItem('cookiesAccepted')) {
+            setTimeout(() => cookieConsent.classList.add('show'), 2000);
+        }
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieConsent.classList.remove('show');
+        });
+    </script>
+    <script>
+        // Canvas animation for constellation effect
+        const canvas = document.getElementById('background-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let points = [];
+        const numPoints = 100; // Liczba punktów
+        const maxDistance = 150; // Maksymalna odległość dla łączenia liniami
+        let pointColor = 'rgba(0, 255, 255, 0.8)'; // Domyślny dla ciemnego
+        let lineColor = 'rgba(0, 255, 255, 0.3)';
+
+        // Funkcja do tworzenia punktów
+        function createPoints() {
+            points = [];
+            for (let i = 0; i < numPoints; i++) {
+                points.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 2, // Prędkość x
+                    vy: (Math.random() - 0.5) * 2, // Prędkość y
+                    radius: Math.random() * 5 + 5, // Promień 5-10
+                    opacity: Math.random() * 0.5 + 0.5
+                });
+            }
+        }
+
+        // Funkcja do aktualizacji pozycji punktów
+        function updatePoints() {
+            points.forEach(point => {
+                point.x += point.vx;
+                point.y += point.vy;
+
+                // Odbicie od krawędzi
+                if (point.x < 0 || point.x > canvas.width) point.vx *= -1;
+                if (point.y < 0 || point.y > canvas.height) point.vy *= -1;
+
+                // Pulsowanie
+                point.opacity = 0.5 + 0.5 * Math.sin(Date.now() * 0.005 + point.x * 0.01);
+            });
+        }
+
+        // Funkcja do rysowania punktów i linii
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Rysuj linie między bliskimi punktami
+            ctx.strokeStyle = lineColor;
+            ctx.lineWidth = 1;
+            for (let i = 0; i < points.length; i++) {
+                for (let j = i + 1; j < points.length; j++) {
+                    const dx = points[i].x - points[j].x;
+                    const dy = points[i].y - points[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < maxDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(points[i].x, points[i].y);
+                        ctx.lineTo(points[j].x, points[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            // Rysuj punkty
+            points.forEach(point => {
+                ctx.beginPath();
+                ctx.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
+                ctx.fillStyle = pointColor.replace('0.8', point.opacity.toString()); // Użyj opacity punktu
+                ctx.fill();
+            });
+        }
+
+        // Funkcja animacji
+        function animate() {
+            updatePoints();
+            draw();
+            requestAnimationFrame(animate);
+        }
+
+        // Inicjalizacja
+        createPoints();
+        animate();
+
+        // Aktualizacja na zmianę rozmiaru okna
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            createPoints();
+        });
+
+        // Aktualizacja kolorów na zmianę trybu
+        function updateCanvasColors(theme) {
+            if (theme === 'light') {
+                pointColor = 'rgba(79, 70, 229, 0.8)'; // Ciemnoniebieski dla jasnego trybu
+                lineColor = 'rgba(79, 70, 229, 0.3)';
+            } else {
+                pointColor = 'rgba(0, 255, 255, 0.8)'; // Neonowy dla ciemnego
+                lineColor = 'rgba(0, 255, 255, 0.3)';
+            }
+        }
+
+        // Podłącz do zmiany trybu
+        const originalUpdate = window.updateBackgroundColors;
+        window.updateBackgroundColors = function(theme) {
+            if (originalUpdate) originalUpdate(theme);
+            updateCanvasColors(theme);
+        };
+    </script>
+    <button id="scroll-top" class="scroll-top" data-aria-label="scroll-top-label" aria-label="Przewiń do góry"><i class="fas fa-arrow-up"></i></button>
+    <div id="cookie-consent" class="cookie-consent">
+        <p data-lang="cookie-consent-text">Ta strona używa plików cookie, aby poprawić doświadczenie użytkownika. <button id="accept-cookies" data-lang="cookie-consent-accept">Akceptuj</button></p>
+    </div>
+    <script>
+        const translations = {
+            pl: {
+                'header-title': 'DJ [Twoje Imię]',
+                'header-subtitle': 'Profesjonalne usługi DJ na Twoje wydarzenie',
+                'nav-about': 'O Mnie',
+                'nav-demo': 'Demo',
+                'nav-services': 'Usługi',
+                'nav-events': 'Wydarzenia',
+                'nav-gallery': 'Galeria',
+                'nav-testimonials': 'Opinie',
+                'nav-faq': 'FAQ',
+                'nav-music': 'Muzyka',
+                'nav-photos': 'Zdjęcia',
+                'nav-location': 'Lokalizacja',
+                'nav-newsletter': 'Newsletter',
+                'nav-contact': 'Kontakt',
+                'about-title': 'O Mnie',
+                'about-bio1': 'Cześć! Jestem DJ [Twoje Imię], pasjonat muzyki elektronicznej z wieloletnim doświadczeniem. Specjalizuję się w tworzeniu niezapomnianych atmosfer na weselach, imprezach firmowych i eventach prywatnych. Moja misja to sprawić, aby każdy moment był magiczny!',
+                'about-bio2': 'Doświadczenie: 10+ lat w branży, setki zadowolonych klientów.',
+                'music-title': 'Moja Muzyka',
+                'music-listen-samples': 'Słuchaj próbek mojej muzyki!',
+                'music-listen-platforms': 'Posłuchaj moich miksów na YouTube i Spotify!',
+                'services-title': 'Usługi',
+                'services-private-title': 'Wydarzenia Prywatne',
+                'services-private-desc': 'Wesela, urodziny, imprezy domowe. Muzyka dopasowana do gustu gości.',
+                'services-corporate-title': 'Wydarzenia Korporacyjne',
+                'services-corporate-desc': 'Konferencje, bankiety, eventy firmowe. Profesjonalna oprawa muzyczna.',
+                'services-other-title': 'Inne Wydarzenia',
+                'services-other-desc': 'Festiwale, koncerty, eventy specjalne. Dostosowane do potrzeb.',
+                'events-title': 'Nadchodzące Wydarzenia',
+                'event1-title': 'Wesele Anny i Marka',
+                'event1-details': '<i class="fas fa-calendar"></i> 15 marca 2026 | <i class="fas fa-map-marker-alt"></i> Restauracja Wierzynek, Kraków',
+                'event1-desc': 'Ślub i wesele z muzyką na żywo!',
+                'event2-title': 'Konferencja TechExpo',
+                'event2-details': '<i class="fas fa-calendar"></i> 22 kwietnia 2026 | <i class="fas fa-map-marker-alt"></i> Hala EXPO, Warszawa',
+                'event2-desc': 'Oprawa muzyczna dla eventu korporacyjnego.',
+                'event3-title': 'Festiwal Muzyczny RetroWave',
+                'event3-details': '<i class="fas fa-calendar"></i> 10 maja 2026 | <i class="fas fa-map-marker-alt"></i> Park Jordana, Kraków',
+                'event3-desc': 'Główny DJ na festiwalu muzyki retro.',
+                'event4-title': 'Urodziny 30-lecia Jana',
+                'event4-details': '<i class="fas fa-calendar"></i> 5 czerwca 2026 | <i class="fas fa-map-marker-alt"></i> Klub Muzyczny, Gdańsk',
+                'event4-desc': 'Impreza urodzinowa z setami DJ.',
+                'event5-title': 'Bal Absolwentów',
+                'event5-details': '<i class="fas fa-calendar"></i> 20 lipca 2026 | <i class="fas fa-map-marker-alt"></i> Sala Balowa, Poznań',
+                'event5-desc': 'Taniec i muzyka na studenckim balu.',
+                'gallery-title': 'Galeria',
+                'testimonials-title': 'Opinie Klientów',
+                'testimonial1-text': '"Niesamowita energia! DJ [Twoje Imię] sprawił, że nasze wesele było niezapomniane. Goście tańczyli całą noc!"',
+                'testimonial1-author': '- Anna & Marek',
+                'testimonial2-text': '"Profesjonalizm na najwyższym poziomie. Muzyka idealnie dopasowana do atmosfery eventu korporacyjnego."',
+                'testimonial2-author': '- Firma XYZ',
+                'testimonial3-text': '"Polecam wszystkim! Świetny DJ z doskonałym wyczuciem rytmu i szerokim repertuarem."',
+                'testimonial3-author': '- Kasia',
+                'testimonial4-text': '"Impreza urodzinowa córki była hitem! DJ wiedział, jak zaangażować młodzież i dorosłych."',
+                'testimonial4-author': '- Rodzina Nowak',
+                'testimonial5-text': '"Doskonała współpraca, kreatywne podejście do playlisty. Event przeszedł nasze oczekiwania."',
+                'testimonial5-author': '- Event Agency ABC',
+                'testimonial6-text': '"Muzyka na żywo z DJ-em to coś wyjątkowego. Atmosfera była elektryzująca!"',
+                'testimonial6-author': '- Tomek',
+                'faq-title': 'FAQ - Najczęściej Zadawane Pytania',
+                'faq1-question': 'Jakie są koszty wynajęcia DJ-a?',
+                'faq1-answer': 'Ceny zależą od typu eventu i długości. Kontaktuj się po szczegóły – oferuję konkurencyjne stawki!',
+                'faq2-question': 'Jakie style muzyczne obsługujesz?',
+                'faq2-answer': 'Pop, rock, disco, house, techno – wszystko, co pasuje do atmosfery Twojej imprezy.',
+                'faq3-question': 'Czy potrzebujesz sprzętu?',
+                'faq3-answer': 'Tak, przywożę profesjonalny sprzęt nagłaśniający i oświetlenie.',
+                'faq4-question': 'Jak zarezerwować termin?',
+                'faq4-answer': 'Użyj formularza kontaktowego lub zadzwoń – potwierdzę dostępność w 24h.',
+                'photo-gallery-title': 'Galeria Zdjęć z Wydarzeń',
+                'location-title': 'Lokalizacja',
+                'location-desc': 'Działam głównie w [Miasto], ale jestem otwarty na wyjazdy.',
+                'newsletter-title': 'Newsletter',
+                'newsletter-desc': 'Zapisz się, aby otrzymywać info o nowych eventach i promocjach!',
+                'newsletter-subscribe': 'Zapisz się',
+                'contact-title': 'Zgłoszenie',
+                'contact-type-placeholder': 'Typ wydarzenia',
+                'contact-type-private': 'Prywatne',
+                'contact-type-corporate': 'Korporacyjne',
+                'contact-type-other': 'Inne',
+                'contact-submit': 'Wyślij Zgłoszenie',
+                'footer-copyright': '&copy; 2026 DJ [Twoje Imię]. Kontakt: email@example.com | Tel: 123-456-789',
+                'contact-name-placeholder': 'Imię',
+                'contact-contact-placeholder': 'Email lub telefon',
+                'contact-location-placeholder': 'Lokalizacja (miasto / venue)',
+                'contact-hours-placeholder': 'Liczba godzin',
+                'contact-comment-placeholder': 'Komentarz',
+                'loading-text': 'Ładowanie...',
+                'theme-toggle-label': 'Przełącz tryb',
+                'scroll-top-label': 'Przewiń do góry',
+                'cookie-consent-text': 'Ta strona używa plików cookie, aby poprawić doświadczenie użytkownika.',
+                'cookie-consent-accept': 'Akceptuj'
+            },
+            en: {
+                'header-title': 'DJ [Your Name]',
+                'header-subtitle': 'Professional DJ services for your event',
+                'nav-about': 'About Me',
+                'nav-demo': 'Demo',
+                'nav-services': 'Services',
+                'nav-events': 'Events',
+                'nav-gallery': 'Gallery',
+                'nav-testimonials': 'Testimonials',
+                'nav-faq': 'FAQ',
+                'nav-music': 'Music',
+                'nav-photos': 'Photos',
+                'nav-location': 'Location',
+                'nav-newsletter': 'Newsletter',
+                'nav-contact': 'Contact',
+                'about-title': 'About Me',
+                'about-bio1': 'Hi! I\'m DJ [Your Name], a passionate electronic music enthusiast with years of experience. I specialize in creating unforgettable atmospheres at weddings, corporate parties, and private events. My mission is to make every moment magical!',
+                'about-bio2': 'Experience: 10+ years in the industry, hundreds of satisfied clients.',
+                'music-title': 'My Music',
+                'music-listen-samples': 'Listen to samples of my music!',
+                'music-listen-platforms': 'Listen to my mixes on YouTube and Spotify!',
+                'services-title': 'Services',
+                'services-private-title': 'Private Events',
+                'services-private-desc': 'Weddings, birthdays, home parties. Music tailored to guests\' tastes.',
+                'services-corporate-title': 'Corporate Events',
+                'services-corporate-desc': 'Conferences, banquets, corporate events. Professional musical accompaniment.',
+                'services-other-title': 'Other Events',
+                'services-other-desc': 'Festivals, concerts, special events. Adapted to your needs.',
+                'events-title': 'Upcoming Events',
+                'event1-title': 'Anna and Marek\'s Wedding',
+                'event1-details': '<i class="fas fa-calendar"></i> March 15, 2026 | <i class="fas fa-map-marker-alt"></i> Restauracja Wierzynek, Kraków',
+                'event1-desc': 'Wedding and reception with live music!',
+                'event2-title': 'TechExpo Conference',
+                'event2-details': '<i class="fas fa-calendar"></i> April 22, 2026 | <i class="fas fa-map-marker-alt"></i> EXPO Hall, Warsaw',
+                'event2-desc': 'Musical accompaniment for corporate event.',
+                'event3-title': 'RetroWave Music Festival',
+                'event3-details': '<i class="fas fa-calendar"></i> May 10, 2026 | <i class="fas fa-map-marker-alt"></i> Park Jordana, Kraków',
+                'event3-desc': 'Main DJ at the retro music festival.',
+                'event4-title': 'Jan\'s 30th Birthday',
+                'event4-details': '<i class="fas fa-calendar"></i> June 5, 2026 | <i class="fas fa-map-marker-alt"></i> Music Club, Gdańsk',
+                'event4-desc': 'Birthday party with DJ sets.',
+                'event5-title': 'Graduation Ball',
+                'event5-details': '<i class="fas fa-calendar"></i> July 20, 2026 | <i class="fas fa-map-marker-alt"></i> Ballroom, Poznań',
+                'event5-desc': 'Dance and music at the student ball.',
+                'gallery-title': 'Gallery',
+                'testimonials-title': 'Client Reviews',
+                'testimonial1-text': '"Amazing energy! DJ [Your Name] made our wedding unforgettable. Guests danced all night!"',
+                'testimonial1-author': '- Anna & Marek',
+                'testimonial2-text': '"Professionalism at the highest level. Music perfectly matched to the corporate event atmosphere."',
+                'testimonial2-author': '- Company XYZ',
+                'testimonial3-text': '"I recommend to everyone! Great DJ with excellent rhythm sense and wide repertoire."',
+                'testimonial3-author': '- Kasia',
+                'testimonial4-text': '"My daughter\'s birthday party was a hit! DJ knew how to engage both youth and adults."',
+                'testimonial4-author': '- Nowak Family',
+                'testimonial5-text': '"Excellent cooperation, creative approach to playlist. Event exceeded our expectations."',
+                'testimonial5-author': '- Event Agency ABC',
+                'testimonial6-text': '"Live music with a DJ is something special. The atmosphere was electrifying!"',
+                'testimonial6-author': '- Tomek',
+                'faq-title': 'FAQ - Frequently Asked Questions',
+                'faq1-question': 'What are the costs of hiring a DJ?',
+                'faq1-answer': 'Prices depend on the type of event and duration. Contact for details – I offer competitive rates!',
+                'faq2-question': 'What music styles do you handle?',
+                'faq2-answer': 'Pop, rock, disco, house, techno – everything that fits your party\'s atmosphere.',
+                'faq3-question': 'Do you need equipment?',
+                'faq3-answer': 'Yes, I bring professional sound equipment and lighting.',
+                'faq4-question': 'How to book a date?',
+                'faq4-answer': 'Use the contact form or call – I\'ll confirm availability within 24h.',
+                'photo-gallery-title': 'Event Photo Gallery',
+                'location-title': 'Location',
+                'location-desc': 'I mainly operate in [City], but I\'m open to trips.',
+                'newsletter-title': 'Newsletter',
+                'newsletter-desc': 'Subscribe to receive info about new events and promotions!',
+                'newsletter-subscribe': 'Subscribe',
+                'contact-title': 'Application',
+                'contact-type-placeholder': 'Event type',
+                'contact-type-private': 'Private',
+                'contact-type-corporate': 'Corporate',
+                'contact-type-other': 'Other',
+                'contact-name-placeholder': 'Name',
+                'contact-contact-placeholder': 'Email or phone',
+                'contact-location-placeholder': 'Location (city / venue)',
+                'contact-hours-placeholder': 'Number of hours',
+                'contact-comment-placeholder': 'Comment',
+                'loading-text': 'Loading...',
+                'theme-toggle-label': 'Toggle theme',
+                'scroll-top-label': 'Scroll to top',
+                'contact-submit': 'Send Application',
+                'footer-copyright': '&copy; 2026 DJ [Your Name]. Contact: email@example.com | Tel: 123-456-789',
+                'cookie-consent-text': 'This site uses cookies to improve user experience.',
+                'cookie-consent-accept': 'Accept'
+            },
+            ru: {
+                'header-title': 'DJ [Ваше Имя]',
+                'header-subtitle': 'Профессиональные услуги DJ для вашего мероприятия',
+                'nav-about': 'Обо Мне',
+                'nav-demo': 'Демо',
+                'nav-services': 'Услуги',
+                'nav-events': 'Мероприятия',
+                'nav-gallery': 'Галерея',
+                'nav-testimonials': 'Отзывы',
+                'nav-faq': 'FAQ',
+                'nav-music': 'Музыка',
+                'nav-photos': 'Фото',
+                'nav-location': 'Местоположение',
+                'nav-newsletter': 'Новостная рассылка',
+                'nav-contact': 'Контакт',
+                'about-title': 'Обо Мне',
+                'about-bio1': 'Привет! Я DJ [Ваше Имя], страстный любитель электронной музыки с многолетним опытом. Специализируюсь на создании незабываемой атмосферы на свадьбах, корпоративных вечеринках и частных мероприятиях. Моя миссия - сделать каждый момент волшебным!',
+                'about-bio2': 'Опыт: 10+ лет в индустрии, сотни довольных клиентов.',
+                'music-title': 'Моя Музыка',
+                'music-listen-samples': 'Слушайте образцы моей музыки!',
+                'music-listen-platforms': 'Слушайте мои миксы на YouTube и Spotify!',
+                'services-title': 'Услуги',
+                'services-private-title': 'Частные Мероприятия',
+                'services-private-desc': 'Свадьбы, дни рождения, домашние вечеринки. Музыка, подобранная по вкусу гостей.',
+                'services-corporate-title': 'Корпоративные Мероприятия',
+                'services-corporate-desc': 'Конференции, банкеты, корпоративные мероприятия. Профессиональное музыкальное сопровождение.',
+                'services-other-title': 'Другие Мероприятия',
+                'services-other-desc': 'Фестивали, концерты, специальные мероприятия. Адаптировано под ваши нужды.',
+                'events-title': 'Предстоящие Мероприятия',
+                'event1-title': 'Свадьба Анны и Марка',
+                'event1-details': '<i class="fas fa-calendar"></i> 15 марта 2026 | <i class="fas fa-map-marker-alt"></i> Ресторан Вериньек, Краков',
+                'event1-desc': 'Свадьба и прием с живой музыкой!',
+                'event2-title': 'Конференция TechExpo',
+                'event2-details': '<i class="fas fa-calendar"></i> 22 апреля 2026 | <i class="fas fa-map-marker-alt"></i> Зал EXPO, Варшава',
+                'event2-desc': 'Музыкальное сопровождение для корпоративного мероприятия.',
+                'event3-title': 'Музыкальный Фестиваль RetroWave',
+                'event3-details': '<i class="fas fa-calendar"></i> 10 мая 2026 | <i class="fas fa-map-marker-alt"></i> Парк Йордана, Краков',
+                'event3-desc': 'Главный DJ на фестивале ретро-музыки.',
+                'event4-title': '30-летие Яна',
+                'event4-details': '<i class="fas fa-calendar"></i> 5 июня 2026 | <i class="fas fa-map-marker-alt"></i> Музыкальный Клуб, Гданьск',
+                'event4-desc': 'Вечеринка по случаю дня рождения с DJ-сетами.',
+                'event5-title': 'Бал Выпускников',
+                'event5-details': '<i class="fas fa-calendar"></i> 20 июля 2026 | <i class="fas fa-map-marker-alt"></i> Бальный Зал, Познань',
+                'event5-desc': 'Танцы и музыка на студенческом бале.',
+                'gallery-title': 'Галерея',
+                'testimonials-title': 'Отзывы Клиентов',
+                'testimonial1-text': '"Невероятная энергия! DJ [Ваше Имя] сделал нашу свадьбу незабываемой. Гости танцевали всю ночь!"',
+                'testimonial1-author': '- Анна и Марк',
+                'testimonial2-text': '"Профессионализм на высшем уровне. Музыка идеально подобрана к атмосфере корпоративного мероприятия."',
+                'testimonial2-author': '- Компания XYZ',
+                'testimonial3-text': '"Рекомендую всем! Отличный DJ с превосходным чувством ритма и широким репертуаром."',
+                'testimonial3-author': '- Кася',
+                'testimonial4-text': '"Вечеринка по случаю дня рождения дочери была хитом! DJ знал, как вовлечь и молодежь, и взрослых."',
+                'testimonial4-author': '- Семья Новак',
+                'testimonial5-text': '"Отличное сотрудничество, творческий подход к плейлисту. Мероприятие превзошло наши ожидания."',
+                'testimonial5-author': '- Агентство Мероприятий ABC',
+                'testimonial6-text': '"Живая музыка с DJ - это что-то особенное. Атмосфера была электризующей!"',
+                'testimonial6-author': '- Томек',
+                'faq-title': 'FAQ - Часто Задаваемые Вопросы',
+                'faq1-question': 'Каковы затраты на аренду DJ?',
+                'faq1-answer': 'Цены зависят от типа мероприятия и продолжительности. Свяжитесь за деталями – предлагаю конкурентные ставки!',
+                'faq2-question': 'Какие музыкальные стили вы обслуживаете?',
+                'faq2-answer': 'Поп, рок, диско, хаус, техно – все, что подходит для атмосферы вашей вечеринки.',
+                'faq3-question': 'Нужна ли вам аппаратура?',
+                'faq3-answer': 'Да, я привозу профессиональную звуковую аппаратуру и освещение.',
+                'faq4-question': 'Как забронировать дату?',
+                'faq4-answer': 'Используйте контактную форму или позвоните – подтвержу доступность в течение 24 часов.',
+                'photo-gallery-title': 'Галерея Фото с Мероприятий',
+                'location-title': 'Местоположение',
+                'location-desc': 'Я в основном работаю в [Город], но открыт для поездок.',
+                'newsletter-title': 'Новостная рассылка',
+                'newsletter-desc': 'Подпишитесь, чтобы получать информацию о новых мероприятиях и акциях!',
+                'newsletter-subscribe': 'Подписаться',
+                'contact-title': 'Заявка',
+                'contact-type-placeholder': 'Тип мероприятия',
+                'contact-type-private': 'Частное',
+                'contact-type-corporate': 'Корпоративное',
+                'contact-type-other': 'Другое',
+                'contact-name-placeholder': 'Имя',
+                'contact-contact-placeholder': 'Email или телефон',
+                'contact-location-placeholder': 'Местоположение (город / место)',
+                'contact-hours-placeholder': 'Количество часов',
+                'contact-comment-placeholder': 'Комментарий',
+                'loading-text': 'Загрузка...',
+                'theme-toggle-label': 'Переключить тему',
+                'scroll-top-label': 'Прокрутить вверх',
+                'contact-submit': 'Отправить Заявку',
+                'footer-copyright': '&copy; 2026 DJ [Ваше Имя]. Контакт: email@example.com | Тел: 123-456-789',
+                'cookie-consent-text': 'Этот сайт использует файлы cookie для улучшения пользовательского опыта.',
+                'cookie-consent-accept': 'Принять'
+            }
+        };
+    </script>
+    <script>
+        // Language switching functionality
+        const languageSelect = document.getElementById('language-select');
+        let currentLang = 'pl'; // Default language
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-lang');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+            // Update placeholders
+            const placeholderElements = document.querySelectorAll('[data-placeholder]');
+            placeholderElements.forEach(element => {
+                const key = element.getAttribute('data-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    element.placeholder = translations[lang][key];
+                }
+            });
+            // Update aria-labels
+            const ariaElements = document.querySelectorAll('[data-aria-label]');
+            ariaElements.forEach(element => {
+                const key = element.getAttribute('data-aria-label');
+                if (translations[lang] && translations[lang][key]) {
+                    element.setAttribute('aria-label', translations[lang][key]);
+                }
+            });
+        }
+
+        const customSelect = document.getElementById('language-select');
+        const selectSelected = customSelect.querySelector('.select-selected');
+        const selectOptions = customSelect.querySelector('.select-options');
+
+        selectSelected.addEventListener('click', () => {
+            customSelect.classList.toggle('open');
+        });
+
+        selectOptions.addEventListener('click', (e) => {
+            if (e.target.classList.contains('select-option')) {
+                const value = e.target.getAttribute('data-value');
+                selectSelected.textContent = e.target.textContent;
+                selectSelected.setAttribute('data-value', value);
+                customSelect.classList.remove('open');
+                changeLanguage(value);
+            }
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!customSelect.contains(e.target)) {
+                customSelect.classList.remove('open');
+            }
+        });
+
+        // Initialize with default language
+        changeLanguage(currentLang);
+
+        // Form validation and submission
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.classList.add('show'), 100);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => document.body.removeChild(toast), 300);
+            }, 3000);
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (this.checkValidity()) {
+                // Simulate form submission
+                showToast('Zgłoszenie zostało wysłane! Skontaktujemy się wkrótce.', 'success');
+                this.reset();
+            } else {
+                showToast('Proszę wypełnić wszystkie wymagane pola poprawnie.', 'error');
+            }
+        });
+
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (this.checkValidity()) {
+                showToast('Zapisano do newslettera!', 'success');
+                this.reset();
+            } else {
+                showToast('Proszę podać prawidłowy adres email.', 'error');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
